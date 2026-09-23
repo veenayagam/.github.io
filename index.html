@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,95 +7,386 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
     <!-- Navigation -->
-    <nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <nav class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-tight text-white">Veenayagam<span class="text-indigo-400">.dev</span></a>
-            <div class="space-x-6 text-sm text-slate-400">
+            <div class="hidden md:flex space-x-6 text-sm text-slate-400 font-medium">
                 <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#recommendations" class="hover:text-white transition">Recommendations</a>
                 <a href="#education" class="hover:text-white transition">Education</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#certifications" class="hover:text-white transition">Certifications</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
             </div>
+            <a href="mailto:veenayagamn@gmail.com" class="bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 px-4 py-2 rounded-lg text-xs font-semibold transition">
+                Get in Touch
+            </a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-24">
 
         <!-- Hero Section -->
-        <section id="about" class="space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium">
-                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                8-time Employee of the Month
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center pt-4">
+            <div class="md:col-span-2 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    8-time Employee of the Month • Gold Medalist • 4.0 GPA Student[cite: 1]
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Technical Business Analyst & <span class="gradient-text">AI Systems Architect</span>
+                </h1>
+                <p class="text-base text-slate-400 leading-relaxed">
+                    3+ years of professional experience managing systems serving <span class="text-slate-200 font-medium">9,000+ daily users</span> for Tier-1 clients[cite: 1]. Current <span class="text-indigo-400 font-medium">4.0 GPA Master's Student</span> in Computer Science[cite: 1]. Expert in authoring BRDs, URSs, and API specs, leveraging AI workflows to cut post-release defects by 70% and drive over $420K in operational savings[cite: 1].
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4 text-sm pt-2">
+                    <a href="mailto:veenayagamn@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold transition flex items-center gap-2 shadow-lg shadow-indigo-600/20">
+                        <i class="fa-regular fa-envelope"></i> Contact Me
+                    </a>
+                    <div class="flex items-center gap-4 px-5 py-3 rounded-lg glass-card text-slate-300">
+                        <span class="flex items-center gap-2 text-xs font-medium"><i class="fa-solid fa-location-dot text-indigo-400"></i> San Jose, CA[cite: 1]</span>
+                        <span class="text-slate-700">|</span>
+                        <a href="https://github.com" target="_blank" aria-label="GitHub Profile" class="hover:text-indigo-400 transition"><i class="fa-brands fa-github text-lg"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn Profile" class="hover:text-indigo-400 transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Technical Business Analyst & AI-Driven Systems Architect
-            </h1>
-            <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
-                6+ years of experience managing high-volume systems (9,000+ daily users) for Tier-1 clients[cite: 1]. Expert in translating complex BRDs into technical specifications, leveraging AI workflows to cut post-release defects by 70%, and driving $420K+ in operational savings[cite: 1].
-            </p>
-            <div class="flex flex-wrap gap-4 text-sm pt-2">
-                <a href="mailto:veenayagamn@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg font-medium transition flex items-center gap-2">
-                    <i class="fa-regular font-bold fa-envelope"></i> Contact Me
-                </a>
-                <div class="flex items-center gap-4 px-4 py-2.5 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300">
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-slate-400"></i> San Jose, CA[cite: 1]</span>
-                    <span class="text-slate-600">|</span>
-                    <a href="https://github.com" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-github text-lg"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
+
+            <!-- Profile Image Container -->
+            <div class="flex justify-center md:justify-end">
+                <div class="relative group w-64 h-64 md:w-72 md:h-72">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                    <img src="profile.jpg" alt="Veenayagam K Sellamuthu" class="relative rounded-2xl w-full h-full object-cover border border-slate-700/50 shadow-2xl">
                 </div>
             </div>
         </section>
 
         <!-- Highlights Grid -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-xl bg-slate-800/40 border border-slate-800 space-y-2">
-                <div class="text-3xl font-bold text-indigo-400">9,000+</div>
-                <div class="text-sm font-semibold text-white">Daily Applicants Managed</div>
-                <p class="text-xs text-slate-400">Served as Person-in-Charge for Tier-1 Loan Origination System[cite: 1].</p>
+            <div class="p-6 rounded-2xl glass-card space-y-2 relative overflow-hidden group">
+                <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl group-hover:bg-indigo-500/20 transition"></div>
+                <div class="text-4xl font-extrabold text-indigo-400">3+ Years</div>
+                <div class="text-sm font-semibold text-white">Technical BSA Experience</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Managing Tier-1 Loan Origination Systems & enterprise workflows[cite: 1].</p>
             </div>
-            <div class="p-6 rounded-xl bg-slate-800/40 border border-slate-800 space-y-2">
-                <div class="text-3xl font-bold text-emerald-400">$420K+</div>
-                <div class="text-sm font-semibold text-white">Annual Savings Driven</div>
-                <p class="text-xs text-slate-400">Automated credit risk evaluation and document verification via AI agents[cite: 1].</p>
+            <div class="p-6 rounded-2xl glass-card space-y-2 relative overflow-hidden group">
+                <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition"></div>
+                <div class="text-4xl font-extrabold text-emerald-400">4.0 GPA</div>
+                <div class="text-sm font-semibold text-white">M.S. Computer Science[cite: 1]</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Jessup University, San Jose (2025–2026)[cite: 1].</p>
             </div>
-            <div class="p-6 rounded-xl bg-slate-800/40 border border-slate-800 space-y-2">
-                <div class="text-3xl font-bold text-sky-400">70%</div>
-                <div class="text-sm font-semibold text-white">Defect Reduction</div>
-                <p class="text-xs text-slate-400">Streamlined documentation & validation workflows across 30+ enhancements[cite: 1].</p>
+            <div class="p-6 rounded-2xl glass-card space-y-2 relative overflow-hidden group">
+                <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/20 transition"></div>
+                <div class="text-4xl font-extrabold text-amber-400">Gold Medal</div>
+                <div class="text-sm font-semibold text-white">Final Year Project</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Universiti Selangor • B.S. Information Technology.</p>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="space-y-6">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3">Core Technical Skills</h2>
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="space-y-6">
+            <div class="border-b border-slate-800 pb-4 flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Recommendations & Endorsements</h2>
+                    <p class="text-xs text-slate-400">Direct feedback from leadership and direct managers</p>
+                </div>
+                <i class="fa-solid fa-quote-right text-3xl text-indigo-500/20"></i>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 rounded-2xl space-y-6 relative overflow-hidden border-l-4 border-l-indigo-500">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800/80 pb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                            CP
+                        </div>
+                        <div>
+                            <h3 class="text-base font-bold text-white">Cheryl Parks</h3>
+                            <p class="text-xs text-indigo-400 font-medium">Growth Focused SMB Leader | AI Certified | Managed Veenayagam directly at Digital Factory</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800">July 1, 2026</span>
+                </div>
+
+                <div class="space-y-4 text-xs md:text-sm text-slate-300 leading-relaxed italic">
+                    <p>
+                        "I had the opportunity to work with Veenayagam at Digital Factory, where he played an instrumental role in supporting our sales team by leveraging technology to create greater lift, scale, and efficiency."
+                    </p>
+                    <p>
+                        "What impressed me most was his ability to bridge technical complexity with practical business outcomes. Whether supporting research, building AI-enabled workflows, or improving internal processes, Veenayagam consistently focused on helping the team work smarter and make better decisions. He has a unique ability to translate technical capabilities into solutions that directly support business objectives."
+                    </p>
+                    <p>
+                        "Beyond his technical expertise, Veenayagam is thoughtful, interested in learning about specific business needs, and always willing to help. He approaches challenges with curiosity, professionalism, and a genuine desire to improve both the work and the people around him."
+                    </p>
+                    <p class="text-slate-200 font-semibold not-italic pt-2">
+                        "If you're looking for someone who combines deep technical capability with strong business acumen, I highly recommend Veenayagam. He'll be an asset to any team fortunate enough to work with him."
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60 text-[11px]">
+                    <span class="bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2.5 py-1 rounded-md">AI Workflows</span>
+                    <span class="bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2.5 py-1 rounded-md">Bridge Tech & Business</span>
+                    <span class="bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2.5 py-1 rounded-md">Process Efficiency</span>
+                    <span class="bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2.5 py-1 rounded-md">Business Acumen</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Academic Achievements Section -->
+        <section id="education" class="space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-white">Education & Achievements</h2>
+                <p class="text-xs text-slate-400">Academic background, honors, and leadership roles</p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-3">
-                    <h3 class="text-sm font-semibold text-indigo-400 tracking-wider uppercase">BA Methodologies & Documentation</h3>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">BRD / URS / FSD[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">API Documentation[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">User Stories & Acceptance Criteria[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">Requirements Traceability (RTM)[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">Agile / Scrum / SDLC[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">QA / SIT / UAT Execution[cite: 1]</span>
+                <!-- Master's Degree -->
+                <div class="glass-card p-6 rounded-2xl space-y-4 border-l-4 border-l-indigo-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Master of Science</span>
+                            <h3 class="text-lg font-bold text-white">Computer Science[cite: 1]</h3>
+                            <p class="text-xs text-slate-300 font-medium">Jessup University, San Jose, CA[cite: 1]</p>
+                        </div>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 font-semibold px-2.5 py-1 rounded">4.0 GPA[cite: 1]</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Focused on advanced algorithms, software engineering principles, and generative AI integration workflows[cite: 1].
+                    </p>
+                    <div class="text-[11px] text-slate-500 font-medium">2025 – 2026[cite: 1]</div>
+                </div>
+
+                <!-- Bachelor's Degree with Image & Highlights -->
+                <div class="glass-card p-6 rounded-2xl space-y-4 border-l-4 border-l-amber-500 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Bachelor of Science</span>
+                                <h3 class="text-lg font-bold text-white">Information Technology</h3>
+                                <p class="text-xs text-slate-300 font-medium">Universiti Selangor (UNISEL)</p>
+                            </div>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 font-semibold px-2.5 py-1 rounded">Gold Medalist</span>
+                        </div>
+
+                        <!-- Industrial Visit Photo -->
+                        <div class="relative group rounded-xl overflow-hidden border border-slate-700/50 my-2">
+                            <img src="image_262c91.jpg" alt="Veenayagam presenting plaque at Industrial Visit with PROTON" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-[11px] text-slate-200 font-medium"><i class="fa-solid fa-building-user text-amber-400 mr-1.5"></i> Plaque presentation during PROTON Industrial Visit</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 pt-1">
+                            <div class="flex items-center gap-2 text-xs text-slate-300">
+                                <i class="fa-solid fa-award text-amber-400 w-4"></i>
+                                <span><strong>Gold Medal:</strong> Final Year Project Award</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-300">
+                                <i class="fa-solid fa-user-tie text-indigo-400 w-4"></i>
+                                <span><strong>President:</strong> Industrial Visit Organization</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="space-y-3">
-                    <h3 class="text-sm font-semibold text-indigo-400 tracking-wider uppercase">Systems, Code & AI Toolkit</h3>
+            </div>
+        </section>
+
+        <!-- Certifications & Verification Section -->
+        <section id="certifications" class="space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-white">Verified Certifications</h2>
+                <p class="text-xs text-slate-400">Direct links to verified technical and domain certifications</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="https://www.hackerrank.com/certificates/6dce05c7f768" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-indigo-400">HackerRank</div>
+                        <div class="text-sm font-bold text-white group-hover:text-indigo-300 transition">SQL (Advanced)</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-indigo-400 transition"></i>
+                </a>
+
+                <a href="https://www.hackerrank.com/certificates/67002d85667d" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-indigo-400">HackerRank</div>
+                        <div class="text-sm font-bold text-white group-hover:text-indigo-300 transition">Python</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-indigo-400 transition"></i>
+                </a>
+
+                <a href="https://www.hackerrank.com/certificates/0abb9619da62" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-indigo-400">HackerRank</div>
+                        <div class="text-sm font-bold text-white group-hover:text-indigo-300 transition">Software Engineer</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-indigo-400 transition"></i>
+                </a>
+
+                <a href="https://www.credly.com/badges/40cc5993-050e-4bd8-b00b-476bb89010a2/public_url" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-sky-400">IBM Credly</div>
+                        <div class="text-sm font-bold text-white group-hover:text-sky-300 transition">IBM Agile Explorer</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-sky-400 transition"></i>
+                </a>
+
+                <a href="https://coursera.org/share/cfd58b7add8bcb7eb5ff081ec5365eca" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-blue-400">Coursera</div>
+                        <div class="text-sm font-bold text-white group-hover:text-blue-300 transition">IBM Data Science</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-blue-400 transition"></i>
+                </a>
+
+                <a href="https://coursera.org/share/1802cca928e50ace4a98896096fa9df8" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-semibold text-purple-400">Coursera / DeepLearning.AI</div>
+                        <div class="text-sm font-bold text-white group-hover:text-purple-300 transition">Deep Learning Specialization</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-purple-400 transition"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Interactive Project Showcase Section -->
+        <section id="projects" class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Key Projects & Case Studies</h2>
+                    <p class="text-xs text-slate-400">Filter through technical projects by focus area</p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium" id="project-tabs">
+                    <button onclick="filterProjects('all')" class="tab-btn active bg-indigo-600 text-white px-3.5 py-1.5 rounded-lg transition" data-filter="all">All</button>
+                    <button onclick="filterProjects('ai')" class="tab-btn bg-slate-800 text-slate-400 hover:text-white px-3.5 py-1.5 rounded-lg transition" data-filter="ai">AI & Agents</button>
+                    <button onclick="filterProjects('data')" class="tab-btn bg-slate-800 text-slate-400 hover:text-white px-3.5 py-1.5 rounded-lg transition" data-filter="data">Data Pipelines</button>
+                    <button onclick="filterProjects('enterprise')" class="tab-btn bg-slate-800 text-slate-400 hover:text-white px-3.5 py-1.5 rounded-lg transition" data-filter="enterprise">Enterprise Systems</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card p-6 rounded-2xl space-y-4" data-category="ai">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-400 text-xs font-semibold">AI & Automation</span>
+                        <span class="text-xs text-slate-500">2025–2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Autonomous AI Agents for Risk & Anomaly Detection[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Authored functional specs and requirements for prototyping REST API-integrated AI Agents[cite: 1]. Automated document verification and credit risk evaluations, boosting flag precision by 25% and cutting processing turnaround times by 30%[cite: 1].
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Claude API[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">REST APIs[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Python[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">FSD / URS[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card p-6 rounded-2xl space-y-4" data-category="data">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Data Engineering</span>
+                        <span class="text-xs text-slate-500">2025–2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">2M+ Location Records Pipeline Optimization[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Defined functional requirements, data pipeline specs, and automated SQL/Python validation workflows for processing over 2 million daily location records, reducing system latency by 35% and saving 10 hours weekly[cite: 1].
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">SQL[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Python Validation[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">OpenAPI[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">ETL Mapping[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card p-6 rounded-2xl space-y-4" data-category="enterprise">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 text-xs font-semibold">Enterprise Systems</span>
+                        <span class="text-xs text-slate-500">2022–2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Tier-1 Financial Loan Origination System (LOS)[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Served as Person-in-Charge (PIC) for high-revenue financial clients supporting 9,000+ daily applicants[cite: 1]. Managed 30 system enhancements worth $1.4M end-to-end while dropping post-release defects by 70%[cite: 1].
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Jira / Agile[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">UAT / SIT[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">SharePoint[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">BRD / RTM[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card p-6 rounded-2xl space-y-4" data-category="ai">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-400 text-xs font-semibold">AI & Education</span>
+                        <span class="text-xs text-slate-500">2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Drone Spatial Imaging & Generative AI Workshop[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Mentored 20+ students on applying Python, command-line log analysis, and GenAI tools to spatial imaging projects, coaching them to present technical concepts clearly to non-technical stakeholders[cite: 1].
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Python[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">Generative AI[cite: 1]</span>
+                        <span class="bg-slate-800/80 px-2 py-1 rounded">CLI Log Analysis[cite: 1]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Skills -->
+        <section id="skills" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Technical Toolkit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-xl space-y-3">
+                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">BA Methodologies & Documentation</h3>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">SQL & Python[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">REST APIs / OpenAPI[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">AI Agents & Generative AI (Claude, ChatGPT)[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">Tableau & Power BI[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">Git / Azure DevOps / Jira[cite: 1]</span>
-                        <span class="bg-slate-800 px-3 py-1.5 rounded-md border border-slate-700/50">Selenium[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">BRD / URS / FSD[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">API Specifications[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">User Stories & Acceptance Criteria[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Requirements Traceability (RTM)[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Agile / Scrum / SDLC[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">SIT / UAT Test Execution[cite: 1]</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl space-y-3">
+                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">Systems, Engineering & AI Tools</h3>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">SQL & Python[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">REST APIs / OpenAPI[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Claude & ChatGPT[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Tableau & Power BI[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Git / Jira / ClickUp[cite: 1]</span>
+                        <span class="bg-slate-800/80 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700/50">Selenium[cite: 1]</span>
                     </div>
                 </div>
             </div>
@@ -103,55 +394,38 @@
 
         <!-- Experience Section -->
         <section id="experience" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3">Professional Experience</h2>
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Professional Experience</h2>
             
-            <div class="space-y-8 border-l-2 border-slate-800 pl-6">
+            <div class="space-y-8 border-l-2 border-slate-800/80 pl-6 ml-2">
                 <!-- Role 1 -->
                 <div class="relative space-y-2">
-                    <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-indigo-500 border-4 border-slate-900"></span>
+                    <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-slate-950"></span>
                     <div class="flex flex-col md:flex-row md:items-center justify-between text-sm">
                         <h3 class="text-lg font-bold text-white">Technical Business Analyst</h3>
-                        <span class="text-slate-400">Oct 2025 – Aug 2026 | Chicago, IL[cite: 1]</span>
+                        <span class="text-slate-400 text-xs">Oct 2025 – Aug 2026 | Chicago, IL[cite: 1]</span>
                     </div>
                     <div class="text-indigo-400 font-medium text-xs">Digital Factory Technologies, Inc.[cite: 1]</div>
-                    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1.5 pt-2 leading-relaxed">
-                        <li>Translated BRDs into detailed URSs, FSDs, and OpenAPI specs using AI tools to cut developer clarification cycles by 25%[cite: 1].</li>
+                    <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 pt-2 leading-relaxed">
+                        <li>Translated complex BRDs into URSs, FSDs, and OpenAPI specs using Claude and ChatGPT to reduce handoff clarification cycles by 25%[cite: 1].</li>
                         <li>Designed automated SQL/Python workflows processing 2M+ daily location records, reducing latency by 35%[cite: 1].</li>
-                        <li>Spearheaded requirements for REST API-integrated AI Agents to automate data workflows and anomaly detection[cite: 1].</li>
+                        <li>Spearheaded requirements for REST API-integrated AI Agents to automate internal workflows and anomaly detection[cite: 1].</li>
                     </ul>
                 </div>
 
                 <!-- Role 2 -->
                 <div class="relative space-y-2">
-                    <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 border-4 border-slate-900"></span>
+                    <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-slate-950"></span>
                     <div class="flex flex-col md:flex-row md:items-center justify-between text-sm">
                         <h3 class="text-lg font-bold text-white">Business Systems Analyst</h3>
-                        <span class="text-slate-400">Jul 2022 – Apr 2025 | Kuala Lumpur, Malaysia[cite: 1]</span>
+                        <span class="text-slate-400 text-xs">Jul 2022 – Apr 2025 | Kuala Lumpur, Malaysia[cite: 1]</span>
                     </div>
                     <div class="text-indigo-400 font-medium text-xs">Juris Technologies Sdn Bhd[cite: 1]</div>
-                    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1.5 pt-2 leading-relaxed">
+                    <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 pt-2 leading-relaxed">
                         <li>Awarded Employee of the Month 8 times for managing highest-revenue financial clients[cite: 1].</li>
                         <li>Served as Person-in-Charge (PIC) for a Tier-1 Loan Origination System serving 9,000+ daily applicants[cite: 1].</li>
-                        <li>Integrated autonomous AI agents into credit risk evaluations, cutting loan turnaround times by 30% ($420K savings)[cite: 1].</li>
-                        <li>Managed 30 system enhancements worth $1.4M end-to-end, cutting post-release defects by 70%[cite: 1].</li>
+                        <li>Integrated autonomous AI agents into credit risk evaluations, cutting turnaround times by 30% ($420K savings)[cite: 1].</li>
+                        <li>Managed 30 system enhancements worth $1.4M end-to-end while reducing post-release defects by 70%[cite: 1].</li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="space-y-6">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-5 rounded-xl bg-slate-800/30 border border-slate-800 space-y-1">
-                    <div class="text-xs text-indigo-400 font-semibold">2025 – 2026 | San Jose, CA[cite: 1]</div>
-                    <h3 class="text-base font-bold text-white">M.S. in Computer Science (4.0 GPA)[cite: 1]</h3>
-                    <p class="text-sm text-slate-400">Jessup University[cite: 1]</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-800/30 border border-slate-800 space-y-1">
-                    <div class="text-xs text-indigo-400 font-semibold">2015 – 2019 | Selangor, Malaysia[cite: 1]</div>
-                    <h3 class="text-base font-bold text-white">B.S. in Information Technology[cite: 1]</h3>
-                    <p class="text-sm text-slate-400">Universiti Selangor (Supply Chain Focus)[cite: 1]</p>
                 </div>
             </div>
         </section>
@@ -159,9 +433,34 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
         <p>© 2026 Veenayagam K Sellamuthu. Hosted on GitHub Pages.</p>
     </footer>
 
+    <!-- Interactive Scripts -->
+    <script>
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                    btn.classList.remove('bg-slate-800', 'text-slate-400');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-slate-800', 'text-slate-400');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
