@@ -2,7 +2,7 @@
 
 Personal portfolio of **Veenayagam K Sellamuthu** — Technical Business Analyst working on enterprise systems, AI workflows, REST API specifications, and data analytics pipelines.
 
-**Live site:** [[https://veenayagam.dev](https://veenayagam.github.io/.github.io/) *(deployed on Vercel)*
+**Live site:** [[https://veenayagam.dev](https://veenayagam.github.io/.github.io/)] *(deployed on Vercel)*
 
 ## Overview
 
