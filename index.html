@@ -7,10 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap');
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+
+        .font-mono {
+            font-family: 'Fira Code', monospace;
         }
 
         .glass-card {
@@ -42,6 +46,22 @@
         .bg-grid-pattern {
             background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
             background-size: 24px 24px;
+        }
+
+        /* Typewriter Cursor Effect */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.1em;
+            background-color: #818cf8;
+            margin-left: 4px;
+            vertical-align: middle;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
     </style>
 </head>
@@ -75,19 +95,47 @@
         <!-- Hero Section -->
         <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-6">
             <div class="lg:col-span-7 space-y-8">
+                
                 <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wide backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
                     8-Time Employee of the Month • Gold Medalist • 4.0 GPA
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-                    Business Analyst & <span class="gradient-text">Data Solutions Specialist</span>
-                </h1>
-                <p class="text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
-                    <strong class="text-slate-100">8-time Employee of the Month Business Analyst</strong> with <span class="text-indigo-400 font-semibold">3+ years of experience</span> evaluating complex enterprise systems and analyzing large-scale data, leveraging advanced Excel, SQL, and AI-driven workflows to optimize operational efficiency and align technology solutions with corporate business strategies.
-                </p>
-                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Expert in authoring BRDs, FSDs, URSs, and REST API specifications, managing backlogs (<span class="text-slate-200">Jira, Confluence, Notion</span>), maintaining repositories (<span class="text-slate-200">SharePoint</span>), delivering executive briefings (<span class="text-slate-200">PowerPoint</span>), and engineering interactive visualizations across <span class="text-slate-100 font-semibold">Tableau and Power BI</span>. Uses AI tools (<span class="text-indigo-300">Claude, ChatGPT</span>) and automated scripts to accelerate delivery, cutting post-release defects by <span class="text-emerald-400 font-semibold">70%</span> and driving <span class="text-emerald-400 font-semibold">$420K in annual operational savings</span>.
-                </p>
+
+                <div class="space-y-3">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Technical Business <span class="gradient-text">Analyst</span>
+                    </h1>
+
+                    <!-- Typewriter Dynamic Subtitle -->
+                    <div class="text-base sm:text-lg text-indigo-300 font-mono flex items-center h-8">
+                        <span id="typewriter-text"></span><span class="typing-cursor"></span>
+                    </div>
+                </div>
+
+                <!-- Shortened Concise Summary -->
+                <div class="space-y-4">
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                        <strong class="text-white">8-time Employee of the Month Technical Business Analyst</strong> with <span class="text-indigo-400 font-semibold">3+ years of experience</span> evaluating enterprise systems and processing large-scale data. Skilled in SQL, Advanced Excel, Python, Power BI, Tableau, and AI-driven workflows—driving <span class="text-emerald-400 font-semibold">$420K+ in annual operational savings</span> and maintaining 99.9% system reliability.
+                    </p>
+
+                    <!-- Collapsible Expand Button -->
+                    <div>
+                        <button onclick="toggleSummary()" id="read-more-btn" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition focus:outline-none group">
+                            <span id="read-more-text">Read More About My Background</span>
+                            <i id="read-more-icon" class="fa-solid fa-chevron-down text-[10px] group-hover:translate-y-0.5 transition-transform"></i>
+                        </button>
+
+                        <!-- Expanded Narrative Details -->
+                        <div id="summary-expanded" class="hidden mt-4 p-5 rounded-2xl glass-card space-y-3 text-xs sm:text-sm text-slate-400 leading-relaxed border-l-2 border-l-indigo-500">
+                            <p>
+                                Expert in authoring comprehensive BRDs, FSDs, URSs, and REST API specifications with OpenAPI/Swagger and Postman. Proven record in managing product backlogs across <strong class="text-slate-200">Jira, Confluence, Notion, and SharePoint</strong>, as well as delivering executive presentations in <strong class="text-slate-200">PowerPoint</strong>.
+                            </p>
+                            <p>
+                                Leverages Generative AI tools (<strong class="text-indigo-300">Claude, ChatGPT</strong>) and automated Spatial SQL / Python data validation scripts to streamline developer workflows, reducing post-release system defects by <strong class="text-emerald-400">70%</strong> and cutting processing latencies across 2M+ daily records.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="flex flex-wrap items-center gap-4 pt-2">
                     <a href="mailto:veenayagamn@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-3.5 rounded-xl text-xs font-bold tracking-wide transition flex items-center gap-2 shadow-xl shadow-indigo-600/20">
@@ -496,6 +544,66 @@
 
     <!-- Interactive Scripts -->
     <script>
+        // Typewriter Effect Script
+        const phrases = [
+            "I optimize enterprise data pipelines.",
+            "I streamline credit risk evaluation with AI.",
+            "I build high-precision REST API specs.",
+            "I bridge technical execution & business strategy."
+        ];
+
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const speed = 70;
+        const deleteSpeed = 35;
+        const delayBetween = 2000;
+        const target = document.getElementById("typewriter-text");
+
+        function typeLoop() {
+            const currentPhrase = phrases[phraseIdx];
+
+            if (isDeleting) {
+                target.textContent = currentPhrase.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                target.textContent = currentPhrase.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            if (!isDeleting && charIdx === currentPhrase.length) {
+                setTimeout(() => { isDeleting = true; typeLoop(); }, delayBetween);
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                setTimeout(typeLoop, 300);
+            } else {
+                setTimeout(typeLoop, isDeleting ? deleteSpeed : speed);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeLoop);
+
+        // Toggle Read More Summary
+        function toggleSummary() {
+            const content = document.getElementById('summary-expanded');
+            const btnText = document.getElementById('read-more-text');
+            const icon = document.getElementById('read-more-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                btnText.textContent = 'Show Less';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                btnText.textContent = 'Read More About My Background';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Project Filter Tab Handler
         function filterProjects(category) {
             const cards = document.querySelectorAll('.project-card');
             const buttons = document.querySelectorAll('.tab-btn');
