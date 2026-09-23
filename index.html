@@ -39,18 +39,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .gradient-border {
-            position: relative;
-        }
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.2), transparent);
-            border-radius: inherit;
-            z-index: -1;
-        }
-
         .bg-grid-pattern {
             background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
             background-size: 24px 24px;
@@ -65,12 +53,12 @@
 
     <!-- Navigation -->
     <nav class="border-b border-slate-800/60 glass-nav sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
+            <a href="#" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2 shrink-0">
                 <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
                 Veenayagam<span class="gradient-text">.dev</span>
             </a>
-            <div class="hidden lg:flex space-x-8 text-xs font-semibold text-slate-400 tracking-wide uppercase">
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-xs font-semibold text-slate-400 tracking-wide uppercase">
                 <a href="#about" class="hover:text-indigo-400 transition">About</a>
                 <a href="#recommendations" class="hover:text-indigo-400 transition">Recommendations</a>
                 <a href="#education" class="hover:text-indigo-400 transition">Education</a>
@@ -78,14 +66,6 @@
                 <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
                 <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
                 <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="tel:4086906530" class="hidden sm:flex bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-slate-300 hover:text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition items-center gap-2">
-                    <i class="fa-solid fa-phone text-indigo-400"></i> (408) 690-6530
-                </a>
-                <a href="mailto:veenayagamn@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl text-xs font-bold tracking-wide transition shadow-lg shadow-indigo-600/25 flex items-center gap-2">
-                    <i class="fa-regular fa-paper-plane"></i> Get in Touch
-                </a>
             </div>
         </div>
     </nav>
@@ -97,13 +77,16 @@
             <div class="lg:col-span-7 space-y-8">
                 <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wide backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                    8x Employee of the Month • Gold Medalist • 4.0 GPA
+                    8-Time Employee of the Month • Gold Medalist • 4.0 GPA
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-                    Technical Business Analyst & <span class="gradient-text">AI Systems Architect</span>
+                    Business Analyst & <span class="gradient-text">Data Solutions Specialist</span>
                 </h1>
                 <p class="text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
-                    3+ years of professional experience managing dual enterprise platforms serving <span class="text-slate-100 font-semibold underline decoration-indigo-500/50">9,000+ daily applications</span> for Tier-1 financial clients. Current <span class="text-indigo-400 font-semibold">4.0 GPA Master's Student</span> in Computer Science. Expert in authoring BRDs, URSs, FSDs, and REST API specs for spatial data and AI-driven platforms.
+                    <strong class="text-slate-100">8-time Employee of the Month Business Analyst</strong> with <span class="text-indigo-400 font-semibold">3+ years of experience</span> evaluating complex enterprise systems and analyzing large-scale data, leveraging advanced Excel, SQL, and AI-driven workflows to optimize operational efficiency and align technology solutions with corporate business strategies.
+                </p>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    Expert in authoring BRDs, FSDs, URSs, and REST API specifications, managing backlogs (<span class="text-slate-200">Jira, Confluence, Notion</span>), maintaining repositories (<span class="text-slate-200">SharePoint</span>), delivering executive briefings (<span class="text-slate-200">PowerPoint</span>), and engineering interactive visualizations across <span class="text-slate-100 font-semibold">Tableau and Power BI</span>. Uses AI tools (<span class="text-indigo-300">Claude, ChatGPT</span>) and automated scripts to accelerate delivery, cutting post-release defects by <span class="text-emerald-400 font-semibold">70%</span> and driving <span class="text-emerald-400 font-semibold">$420K in annual operational savings</span>.
                 </p>
                 
                 <div class="flex flex-wrap items-center gap-4 pt-2">
@@ -137,18 +120,18 @@
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="p-8 rounded-3xl glass-card space-y-3 relative overflow-hidden group border border-slate-800">
                 <div class="text-5xl font-extrabold text-indigo-400 tracking-tight">3+ Years</div>
-                <div class="text-sm font-bold text-white uppercase tracking-wider">Technical BSA Experience</div>
-                <p class="text-xs text-slate-400 leading-relaxed">Managing location intelligence, Loan Origination Systems & enterprise workflows.</p>
+                <div class="text-sm font-bold text-white uppercase tracking-wider">Enterprise Systems Experience</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Evaluating high-scale systems, Tier-1 LOS platforms, and automated data pipelines.</p>
             </div>
             <div class="p-8 rounded-3xl glass-card space-y-3 relative overflow-hidden group border border-slate-800">
-                <div class="text-5xl font-extrabold text-emerald-400 tracking-tight">4.0 GPA</div>
-                <div class="text-sm font-bold text-white uppercase tracking-wider">M.S. Computer Science</div>
-                <p class="text-xs text-slate-400 leading-relaxed">Jessup University, San Jose (2025–2026).</p>
+                <div class="text-5xl font-extrabold text-emerald-400 tracking-tight">$420K</div>
+                <div class="text-sm font-bold text-white uppercase tracking-wider">Annual Savings</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Driven through credit risk automation, AI tools, and a 70% reduction in post-release defects.</p>
             </div>
             <div class="p-8 rounded-3xl glass-card space-y-3 relative overflow-hidden group border border-slate-800">
-                <div class="text-5xl font-extrabold text-amber-400 tracking-tight">Gold Medal</div>
-                <div class="text-sm font-bold text-white uppercase tracking-wider">Academic & Athletic Honors</div>
-                <p class="text-xs text-slate-400 leading-relaxed">UNISEL FYP Gold Medalist • Top-3 School Athlete in 200M & Cross-Country.</p>
+                <div class="text-5xl font-extrabold text-amber-400 tracking-tight">8x Winner</div>
+                <div class="text-sm font-bold text-white uppercase tracking-wider">Employee of the Month</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Recognized for driving stakeholder consensus and maintaining 99.9% system reliability.</p>
             </div>
         </section>
 
@@ -220,13 +203,13 @@
                             <span class="text-xs bg-indigo-500/20 text-indigo-300 font-bold px-3 py-1.5 rounded-lg border border-indigo-500/30">4.0 GPA</span>
                         </div>
                         <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
-                            Focused on advanced algorithms, software engineering principles, and generative AI integration workflows.
+                            Focused on advanced algorithms, data engineering, software engineering principles, and generative AI integration workflows.
                         </p>
                     </div>
                     <div class="text-xs text-slate-500 font-mono pt-4 border-t border-slate-800/80">2025 – 2026</div>
                 </div>
 
-                <!-- Bachelor's Degree with Image & Highlights -->
+                <!-- Bachelor's Degree -->
                 <div class="glass-card p-8 rounded-3xl space-y-6 border-l-4 border-l-amber-500 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex justify-between items-start">
@@ -262,7 +245,7 @@
             </div>
         </section>
 
-        <!-- Certifications & Verification Section -->
+        <!-- Certifications Section -->
         <section id="certifications" class="space-y-8">
             <div class="border-b border-slate-800/80 pb-5">
                 <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Credentials</span>
@@ -320,7 +303,7 @@
             </div>
         </section>
 
-        <!-- Interactive Project Showcase Section -->
+        <!-- Projects Section -->
         <section id="projects" class="space-y-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800/80 pb-5">
                 <div>
@@ -331,7 +314,7 @@
                 <div class="flex flex-wrap gap-2 text-xs font-bold" id="project-tabs">
                     <button onclick="filterProjects('all')" class="tab-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl transition shadow-lg shadow-indigo-600/20" data-filter="all">All</button>
                     <button onclick="filterProjects('ai')" class="tab-btn bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white px-4 py-2 rounded-xl transition" data-filter="ai">AI & Agents</button>
-                    <button onclick="filterProjects('data')" class="tab-btn bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white px-4 py-2 rounded-xl transition" data-filter="data">Data Pipelines</button>
+                    <button onclick="filterProjects('data')" class="tab-btn bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white px-4 py-2 rounded-xl transition" data-filter="data">Data Analytics</button>
                     <button onclick="filterProjects('enterprise')" class="tab-btn bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white px-4 py-2 rounded-xl transition" data-filter="enterprise">Enterprise Systems</button>
                 </div>
             </div>
@@ -341,19 +324,19 @@
                 <div class="project-card glass-card p-8 rounded-3xl space-y-5 flex flex-col justify-between" data-category="ai">
                     <div class="space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold">AI & Spatial Tech</span>
+                            <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold">AI Agents & Proximity Tech</span>
                             <span class="text-xs font-mono text-slate-500">2025–2026</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">High-Precision Geolocation & AI Behavioral Workflows</h3>
+                        <h3 class="text-xl font-bold text-white">Autonomous AI Agents & High-Precision API Specs</h3>
                         <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
-                            Authored functional specifications for REST API integrations and SDK modules enabling high-precision proximity targeting (5–30 ft radius). Prototyped AI workflows and real-time triggers, boosting engagement CTR to 30% and conversion rates by over 200%.
+                            Formulated REST API specifications for autonomous AI Agents and predictive analytics models using OpenAPI/Swagger. Driven a 30% campaign click-through rate (vs. 2% benchmark) and improved anomaly flag precision by 25%.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 pt-2">
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">REST APIs / SDK</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Claude API</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Spatial APIs</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">FSD / URS</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Postman</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">OpenAPI/Swagger</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Claude / ChatGPT</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">REST APIs</span>
                     </div>
                 </div>
 
@@ -361,19 +344,19 @@
                 <div class="project-card glass-card p-8 rounded-3xl space-y-5 flex flex-col justify-between" data-category="data">
                     <div class="space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Data Engineering</span>
+                            <span class="px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Data Visualization & Pipelines</span>
                             <span class="text-xs font-mono text-slate-500">2025–2026</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">2M+ Real-Time Location Records Pipeline</h3>
+                        <h3 class="text-xl font-bold text-white">28 Modular Dashboards (Tableau & Excel) & 2M+ Pipeline</h3>
                         <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
-                            Defined functional requirements, data pipeline specs, and automated SQL/Python validation workflows for processing over 2 million daily location records, reducing latency by 35% and saving 10 hours weekly.
+                            Engineered 28 Excel, Tableau, and Power BI dashboards connected to behavioral data pipelines. Automated Spatial SQL (PostGIS) and Python validation for 2M+ daily records, cutting latency by 35% and saving 10 hours of manual work weekly.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 pt-2">
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">SQL</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Python Validation</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">OpenAPI</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">ETL Mapping</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Tableau</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Power BI</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Spatial SQL</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Python</span>
                     </div>
                 </div>
 
@@ -381,19 +364,19 @@
                 <div class="project-card glass-card p-8 rounded-3xl space-y-5 flex flex-col justify-between" data-category="enterprise">
                     <div class="space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold">Enterprise Systems</span>
+                            <span class="px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold">Enterprise Banking</span>
                             <span class="text-xs font-mono text-slate-500">2022–2025</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Dual Tier-1 Loan Origination Systems (LOS)</h3>
+                        <h3 class="text-xl font-bold text-white">Tier-1 Loan Origination System (9,000+ Daily Applicants)</h3>
                         <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
-                            Appointed Person-in-Charge (PIC) for two LOS systems for major financial institutions handling 9,000+ daily applications. Secured and launched a new LOS platform, oversaw $1.4M+ in enterprise enhancements, executed DR drills, and dropped defect rates by 70%.
+                            Person-in-Charge for a Tier-1 Loan Origination System. Authored BRDs, FSDs, and API specs with Advanced Excel financial models, managing $1.4M in system enhancements and maintaining 99.9% system reliability while reducing defects by 70%.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 pt-2">
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Jira / Agile</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">SIT / UAT Testing</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Visio Workflow</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">DR Drills & SLA</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Jira / Confluence</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">SharePoint</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">PowerPoint</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">BRD / FSD</span>
                     </div>
                 </div>
 
@@ -401,24 +384,24 @@
                 <div class="project-card glass-card p-8 rounded-3xl space-y-5 flex flex-col justify-between" data-category="ai">
                     <div class="space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold">AI & Education</span>
-                            <span class="text-xs font-mono text-slate-500">2025</span>
+                            <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold">Risk Automation</span>
+                            <span class="text-xs font-mono text-slate-500">2022–2025</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Drone Spatial Imaging & Generative AI Workshop</h3>
+                        <h3 class="text-xl font-bold text-white">Automated Credit Risk Bots & Financial Data Modeling</h3>
                         <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
-                            Mentored 20+ students on applying Python, command-line log analysis, and GenAI tools to spatial imaging projects, coaching them to present technical concepts clearly to non-technical stakeholders.
+                            Formulated integration requirements for rules-based bots and credit risk AI Agents using Excel data models. Reduced loan turnaround time by 30% and unlocked $420K in annual operational savings.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 pt-2">
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Python</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Generative AI</span>
-                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">CLI Log Analysis</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Rules-based Bots</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">Advanced Excel</span>
+                        <span class="bg-slate-900/80 border border-slate-800 px-2.5 py-1 rounded-md">SQL/Python</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Skills -->
+        <!-- Core Skills Toolkit -->
         <section id="skills" class="space-y-8">
             <div class="border-b border-slate-800/80 pb-5">
                 <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Capabilities</span>
@@ -427,27 +410,25 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="glass-card p-8 rounded-3xl space-y-4">
-                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">BA Methodologies & Documentation</h3>
+                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">BA Methodologies, Documentation & Collaboration</h3>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">BRD / URS / FSD Specs</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">API & SDK Specifications</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">MS Visio Process Mapping</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Requirements Traceability (RTM)</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Agile / Scrum / SDLC</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">SIT / UAT Test Execution</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Deployment Release Management</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">BRD / FSD / URS / API Specs</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Jira / Confluence / Notion / SharePoint</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Executive PowerPoint Briefings</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Postman & OpenAPI/Swagger</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Stakeholder Consensus & Audits</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Product Backlog Prioritization</span>
                     </div>
                 </div>
                 <div class="glass-card p-8 rounded-3xl space-y-4">
-                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">Systems, Engineering & AI Tools</h3>
+                    <h3 class="text-xs font-bold text-indigo-400 tracking-wider uppercase">Analytics, Data Engineering & AI Workflows</h3>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">SQL & Python</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">REST APIs / OpenAPI</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Disaster Recovery (DR) Drills</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Claude & ChatGPT</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Spatial / Location Intelligence</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Tableau & Power BI</span>
-                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Git / Jira / ClickUp</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Advanced Excel & Financial Modeling</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Tableau & Power BI Visualizations</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">SQL & Spatial SQL (PostGIS)</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Python Data Validation</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Claude & ChatGPT Workflows</span>
+                        <span class="bg-slate-900/80 text-slate-300 px-3.5 py-2 rounded-xl border border-slate-800">Autonomous AI Agents</span>
                     </div>
                 </div>
             </div>
@@ -466,15 +447,15 @@
                     <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-slate-950"></span>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between text-sm gap-1">
                         <h3 class="text-xl font-bold text-white">Technical Business Analyst</h3>
-                        <span class="text-slate-400 font-mono text-xs">Oct 2025 – Aug 2026 | Chicago, IL</span>
+                        <span class="text-slate-400 font-mono text-xs">Oct 2025 – Aug 2026 | Chicago, IL (Hybrid)</span>
                     </div>
                     <div class="text-indigo-400 font-bold text-xs uppercase tracking-wider">Digital Factory Technologies, Inc.</div>
                     <ul class="list-disc list-outside text-xs sm:text-sm text-slate-300 space-y-2.5 pt-2 leading-relaxed pl-4">
-                        <li>Authored technical documentation (BRDs, URSs, OpenAPI specs) for mobile SDK and API integrations, enabling high-precision proximity targeting (5–30 ft radius) and seamless digital wallet POS redemptions.</li>
-                        <li>Designed automated SQL and Python workflows to validate 2M+ daily location records, cutting pipeline processing latency by 35% and saving 10 hours weekly.</li>
-                        <li>Spearheaded requirements for REST API-integrated AI Agents and behavioral intelligence models to track user journey patterns, achieving a 30% click-through rate (CTR) and boosting conversion rates by 200% over generic pushes.</li>
-                        <li>Led research and requirement specs for real-time reporting dashboards, facilitating A/B testing and performance tracking across multi-channel notification systems at scale.</li>
-                        <li>Leveraged GenAI tools (Claude, ChatGPT) to accelerate business documentation, reducing sales-to-engineering handoff clarification cycles by 25%.</li>
+                        <li>Analyzed enterprise business systems and stakeholder requirements using Postman and OpenAPI/Swagger to refine technical specifications for high-precision APIs and behavioral analytics models, cutting developer clarification cycles by 25% through Claude and ChatGPT workflow integration.</li>
+                        <li>Engineered a modular suite of 28 Excel, Tableau, and Power BI dashboards connected to behavioral data pipelines, delivering real-time path-to-purchase analytics that drove a 200% boost in campaign conversion rates.</li>
+                        <li>Developed functional specifications and automated Spatial SQL (PostGIS) and Python data validation workflows for 2M+ daily data records, cutting processing latency by 35% and saving 10 hours of manual operational effort weekly.</li>
+                        <li>Formulated REST API specifications for autonomous AI Agents and predictive analytics models, achieving a 30% campaign click-through rate (vs. 2% industry benchmark) while improving anomaly flag precision by 25%.</li>
+                        <li>Prioritized product backlogs across Jira, Confluence, Notion, and SharePoint, delivering concise PowerPoint briefings to leadership that lowered audit reporting turnaround times from 5 hours to under 3 hours.</li>
                     </ul>
                 </div>
 
@@ -482,17 +463,15 @@
                 <div class="relative space-y-3">
                     <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-slate-950"></span>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between text-sm gap-1">
-                        <h3 class="text-xl font-bold text-white">Senior Business Systems Analyst</h3>
+                        <h3 class="text-xl font-bold text-white">Business Analyst</h3>
                         <span class="text-slate-400 font-mono text-xs">Jul 2022 – Apr 2025 | Kuala Lumpur, Malaysia</span>
                     </div>
                     <div class="text-indigo-400 font-bold text-xs uppercase tracking-wider">Juris Technologies Sdn Bhd</div>
                     <ul class="list-disc list-outside text-xs sm:text-sm text-slate-300 space-y-2.5 pt-2 leading-relaxed pl-4">
-                        <li>Promoted to Senior Position following exceptional system support feedback; earned Employee of the Month honors 8 times while managing high-revenue financial client accounts.</li>
-                        <li>Served as Person-in-Charge (PIC) for two Tier-1 Loan Origination Systems (LOS) processing 9,000+ combined daily applications, maintaining system operational stability and standby readiness for major incidents and Disaster Recovery (DR) drills.</li>
-                        <li>Secured and launched a new LOS system while delivering over $1.4M in system enhancements across 30+ initiatives on tight deadlines—achieving the highest enhancement output across all client accounts.</li>
-                        <li>Appointed PIC for a major financial institution's core platform within two months, driving a 70% drop in system defects in three months through systematic root-cause identification and operational triage.</li>
-                        <li>Managed full SDLC workflows: authored URS and FSD specifications with MS Visio diagrams, built and executed QA/SIT/UAT test scripts, and created production Deployment Packages & Release Guides.</li>
-                        <li>Mentored three junior team members and collaborated cross-functionally with senior software engineering teams to align delivery with strategic business goals.</li>
+                        <li>Served as Person-in-Charge (PIC) for a Tier-1 Loan Origination System serving 9,000+ daily applicants, earning <strong>Employee of the Month 8 times</strong> for driving stakeholder consensus and maintaining 99.9% system reliability.</li>
+                        <li>Authored detailed BRDs, FSDs, and API technical specifications paired with complex Advanced Excel financial models and SQL/Python validation scripts, enabling engineering teams to ship core system modules 2 weeks ahead of schedule.</li>
+                        <li>Formulated integration requirements for automated rules-based bots and AI Agents, leveraging Excel data models to streamline credit risk evaluations, cutting loan processing turnaround times by 30% and saving <strong>$420K in annual operational expenses</strong>.</li>
+                        <li>Managed end-to-end execution of 30 system enhancements valued at $1.4M, maintaining project repositories in SharePoint, visualizing insights via Power BI, and presenting architecture updates via PowerPoint to reduce post-release defects by 70%.</li>
                     </ul>
                 </div>
             </div>
